@@ -29,5 +29,5 @@ func TestFormatMultipleValues(t *testing.T) {
 
 	result := Formatter{quotation}.Format()
 
-	assert.Contains(t, expected, result)
+	assert.EqualValues(t, expected, result)
 }
