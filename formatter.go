@@ -12,8 +12,10 @@ type Formatter struct {
 func (formatter Formatter) Format() string {
 	var buffer bytes.Buffer
 
+	buffer.WriteString("\t\tCotações\t\t\n\n")
+
 	for _, quotation := range formatter.message {
-		buffer.WriteString(fmt.Sprintf("Cotação %s em relação ao Real: R$ %.2f = 1 %s\n", quotation.Name, quotation.Value, quotation.Name))
+		buffer.WriteString(fmt.Sprintf("1 %s = R$ %.2f\n", quotation.Name, quotation.Value))
 	}
 
 	return buffer.String()
