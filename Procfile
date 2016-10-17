@@ -1,1 +1,1 @@
-web: ./quotation_bot
+web: quotation_bot
